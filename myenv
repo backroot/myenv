@@ -15,7 +15,7 @@ __DATA__
 @@ index.html.ep
 % layout 'default';
 % title 'HTTP ENV Checker';
-<% if ($env) { %>
+<% if (0 == keys(%{$env})) { %>
 <p>No http environment.</p>
 <% } %>
 <% for my $key (keys(%{$env})) { %>
